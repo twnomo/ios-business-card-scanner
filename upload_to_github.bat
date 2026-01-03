@@ -39,10 +39,10 @@ if %ERRORLEVEL% NEQ 0 (
     git remote set-url origin https://github.com/twnomo/ios-business-card-scanner.git
 )
 
-:: 7. Push
-echo [*] Pushing to GitHub...
+:: 7. Push (using --force to overwrite initial README/License on GitHub)
+echo [*] Pushing to GitHub (Force Push)...
 echo (You may be prompted for a login or Personal Access Token in a popup window)
-git push -u origin main
+git push -u origin main --force
 
 if %ERRORLEVEL% EQU 0 (
     echo ========================================
